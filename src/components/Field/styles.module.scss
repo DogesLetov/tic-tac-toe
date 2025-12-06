@@ -1,0 +1,21 @@
+.field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+}
+.container {
+    display: flex;
+    gap: 0,5vw;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+ 
+h1 {
+    font-size: 10vw;
+    
+}
