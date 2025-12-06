@@ -24,6 +24,10 @@ export default function Field() {
         togglePlayer();
     };
 
+    const windowReload = () => {
+        window.location.reload();
+    }
+
     console.log(plates);
     console.log(IsWinner(plates));
 
@@ -32,7 +36,7 @@ export default function Field() {
     
     return (
         <div className={style.field}>
-            <h1>
+            <h1 className={winner || isDraw ? style.winner : ''}>
                 {winner ? `Победил ${winner}` : isDraw ? "Ничья!" : "Крестики нолики"}
             </h1>
             <div className={style.container}>
@@ -50,5 +54,8 @@ export default function Field() {
                     </div>
                 ))}
             </div>
+            <button onClick={windowReload} disabled={!winner && !isDraw} className={clsx(style.restartButton, {
+                [style.disabled]: !winner && !isDraw
+            })}>Начать заново</button>
         </div>);
 }

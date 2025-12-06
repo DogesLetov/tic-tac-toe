@@ -6,7 +6,7 @@
 }
 .container {
     display: flex;
-    gap: 0,5vw;
+    gap: 1vw;
 }
 
 .row {
@@ -17,5 +17,33 @@
  
 h1 {
     font-size: 10vw;
-    
 }
+
+@keyframes sparkle {
+    0%, 100% {
+        color: black;
+        text-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+    }
+    50% {
+        color: gold;
+        text-shadow: 0 0 20px rgba(255, 215, 0, 1), 0 0 30px rgba(255, 165, 0, 0.8);
+    }
+}
+
+.winner {
+    animation: sparkle 0.6s infinite;
+}
+
+.restartButton {
+    padding: 1vw;
+    font-size: 4vw;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 1vh;
+    background-color: yellowgreen;
+}
+
+.disabled {
+        background-color: rgb(226, 226, 226);
+        cursor: not-allowed !important;
+    }
